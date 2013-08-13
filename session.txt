@@ -1,0 +1,36 @@
+<NotepadPlus>
+    <Session activeView="0">
+        <mainView activeIndex="28">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="490" startPos="778" endPos="790" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\spec\requests\static_pages_spec.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="679" startPos="151" endPos="151" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\spec\requests\user_pages_spec.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="567" startPos="0" endPos="0" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\spec\spec_helper.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="518" startPos="235" endPos="235" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\static_pages\about.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="434" startPos="0" endPos="0" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\static_pages\contact.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="525" startPos="0" endPos="0" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\static_pages\help.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\static_pages\home.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="546" startPos="15" endPos="15" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\layouts\application.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="525" startPos="636" endPos="636" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\layouts\_header.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="448" startPos="0" endPos="0" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\layouts\_footer.html.erb" />
+            <File firstVisibleLine="129" xOffset="0" scrollWidth="308" startPos="2488" endPos="2488" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\assets\stylesheets\custom.css.scss" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="350" startPos="0" endPos="0" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\spec\support\utilities.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="504" startPos="968" endPos="968" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\app\models\user.rb" />
+            <File firstVisibleLine="24" xOffset="0" scrollWidth="560" startPos="1020" endPos="1039" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\Gemfile" />
+            <File firstVisibleLine="17" xOffset="0" scrollWidth="1015" startPos="990" endPos="990" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\spec\models\user_spec.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="364" startPos="279" endPos="279" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\app\controllers\users_controller.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="364" startPos="175" endPos="175" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\app\controllers\application_controller.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="357" startPos="0" endPos="0" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\app\controllers\static_pages_controller.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="588" startPos="325" endPos="325" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\config\environments\test.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="490" startPos="325" endPos="325" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\app\helpers\users_helper.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="539" startPos="178" endPos="178" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\users\new.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="588" startPos="0" endPos="0" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\config\environments\development.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="637" startPos="164" endPos="170" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\config\routes.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="490" startPos="317" endPos="317" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\shared\_error_messages.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="581" startPos="291" endPos="291" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\app\controllers\sessions_controller.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="525" startPos="569" endPos="569" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\spec\requests\authentication_pages_spec.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="469" startPos="108" endPos="160" selMode="0" lang="&#x041E;&#x0431;&#x044B;&#x0447;&#x043D;&#x044B;&#x0439; &#x0422;&#x0435;&#x043A;&#x0441;&#x0442;" encoding="-1" filename="C:\sample_app\app\views\sessions\new.html.erb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="525" startPos="228" endPos="228" selMode="0" lang="Ruby" encoding="-1" filename="C:\sample_app\app\helpers\sessions_helper.rb" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="721" startPos="643" endPos="643" selMode="0" lang="Javascript" encoding="-1" filename="C:\sample_app\app\assets\javascripts\application.js" />
+        </mainView>
+        <subView activeIndex="0" />
+    </Session>
+</NotepadPlus>
