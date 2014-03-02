@@ -5,6 +5,11 @@ namespace :db do
     make_microposts
     make_relationships
   end
+  
+  task categorize: :environment do
+    make_categories
+  end
+  
 end
 
 def make_users
@@ -29,6 +34,15 @@ def make_microposts
   50.times do
     content = Faker::Lorem.sentence(5)
     users.each { |user| user.microposts.create!(content: content) }
+  end
+end
+
+def make_categories
+  users = User.all(limit: 6)
+  50.times do
+    content = Faker::Lorem.sentence(5)
+	text_content = Faker::Lorem.sentence(7)
+    users.each { |user| user.categories.create!(title: content, text: text_content) }
   end
 end
 
