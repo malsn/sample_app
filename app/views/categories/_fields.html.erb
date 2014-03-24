@@ -1,0 +1,13 @@
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :text %>
+<%= f.text_field :text %>
+
+<%= f.label :user_id %>
+<%= f.select :user_id, options_for_select(@persons) %>
+
+<%= f.label :parent_id %>
+<%= f.select :parent_id, options_for_select(@parcategories) %>
