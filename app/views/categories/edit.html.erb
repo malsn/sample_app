@@ -1,0 +1,24 @@
+<% provide(:title, 'Edit Category') %>
+<h1>Edit category <%= @category.title %></h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@category) do |f| %>
+	  <%= render 'fields', f: f %>
+      <%= f.submit "Edit category", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+
+<% if @subcategories.empty? %>
+
+<% else %>
+
+<%= will_paginate %>
+<ul class="subcategories">
+  <%= render @subcategories %>
+</ul>
+<%= will_paginate %>
+
+<% end %>
