@@ -4,10 +4,12 @@
 <%= f.text_field :title %>
 
 <%= f.label :text %>
-<%= f.text_field :text %>
+<%= f.text_area :text, size: "60x12" %>
 
+<% if current_user.admin? %>
 <%= f.label :user_id %>
-<%= f.select :user_id, options_for_select(@persons) %>
+<%= f.select :user_id, options_for_select(@persons, current_user.id) %>
+<% end %>
 
 <%= f.label :parent_id %>
 <%= f.select :parent_id, options_for_select(@parcategories) %>
