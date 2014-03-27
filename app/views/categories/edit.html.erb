@@ -3,11 +3,14 @@
 
 <div class="row">
   <aside class="span4">
-	<% if @parent.blank? %>
+	<section>
+	<% if @category.parent.blank? %>
 	root
 	<% else %>
-	<%= link_to @parent.title, @parent %>
+	<%= link_to @category.parent.title, @category.parent %>
 	<% end %>
+	</section>
+	<section>
 	<% if @subcategories.empty? %>
 	Has no child categories
 	<% else %>
@@ -15,6 +18,7 @@
 	  <%= render @subcategories %>
 	</ul>
 	<% end %>
+	</section>
   </aside>
   <div class="span8">
     <%= form_for(@category) do |f| %>
