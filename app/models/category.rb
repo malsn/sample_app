@@ -4,5 +4,5 @@ class Category < ActiveRecord::Base
   has_many :contents, dependent: :destroy
   belongs_to :parent, class_name: "Category"
   belongs_to :user
-  validates :title, :text, presence: true
+  validates :title, :text, presence: true, length: { minimum: 5}
 end

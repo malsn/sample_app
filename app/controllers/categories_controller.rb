@@ -23,6 +23,19 @@ class CategoriesController < ApplicationController
     end
  end
  
+ def update
+    @category= Category.find(params[:id])
+	@subcategories = @category.subcategories
+    if @category.update_attributes(params[:category])
+      flash[:success] = "Category updated"
+	  redirect_to @category
+    else
+	  flash[:error] = "Category not updated"
+	  self.objlist
+	  render 'edit'
+    end
+ end
+ 
  def new
     self.objlist
     @category = Category.new
