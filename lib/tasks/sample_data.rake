@@ -10,6 +10,10 @@ namespace :db do
     make_categories
   end
   
+  task first_category: :environment do
+    Category.create!(title: 'root', text: '')
+  end
+  
 end
 
 def make_users
