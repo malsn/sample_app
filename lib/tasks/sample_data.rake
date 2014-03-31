@@ -11,7 +11,7 @@ namespace :db do
   end
   
   task first_category: :environment do
-    Category.create!(title: 'root', text: '')
+    Category.create!(title: 'root_category', text: 'This is the default category!')
   end
   
 end
