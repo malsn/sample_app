@@ -8,21 +8,19 @@
 
 <% if current_user.admin? %>
 <%= f.label :user_id %>
-<%= f.select :user_id, options_for_select(@persons, current_user.id) %>
+<%= f.select :user_id, options_for_select( User.all.map { |user| [user.name, user.id] } , current_user.id) %>
 <% end %>
 
 <%= f.label :parent_id %>
+<% @allcategories = Category.all %>
 <% if !@category.parent.nil? %>
 	<%= 
 	@current_cat = @category
 	@collection = [@current_cat]
 	collect(@current_cat)
-	f.select :parent_id, options_for_select(@parcategories.delete_if { |item| item == [@category.title, @category.id] }, @category.parent.id) 
+	@cutcategories = @allcategories - @collection
+	f.select :parent_id, options_for_select(@cutcategories.map { |cat| [cat.title, cat.id] } , @category.parent.id)
 	%>
 <% else %>
-	<%= f.select :parent_id, options_for_select(@parcategories) %>
+	<%= f.select :parent_id, options_for_select(@allcategories.map { |cat| [cat.title, cat.id] }) %>
 <% end %>
-
-<%= 
-@collections = @collection.map { |cat| [cat.title, cat.id] }
-f.select :parent_id, options_for_select(@collections) %>

@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+before_filter :signed_in_user
 
  def index
 	#@categories = Category.where(parent_id: nil).paginate(page: params[:page])
@@ -8,7 +9,6 @@ class CategoriesController < ApplicationController
  def show
 	@category = Category.find(params[:id])
 	@subcategories = @category.subcategories
-	self.objlist
 	if !@category.parent.nil?
 		render 'edit'
 	else
@@ -22,7 +22,6 @@ class CategoriesController < ApplicationController
 	  flash[:success] = "Category successfully created!"
       redirect_to categories_path
     else
-	  self.objlist
       render 'new'
     end
  end
@@ -35,19 +34,18 @@ class CategoriesController < ApplicationController
 	  redirect_to @category
     else
 	  flash[:error] = "Category not updated"
-	  self.objlist
 	  render 'edit'
     end
  end
  
  def new
-    self.objlist
     @category = Category.new
  end
  
- def objlist
-	@persons = User.all.map { |user| [user.name, user.id] }
-	@parcategories = Category.all.map { |cat| [cat.title, cat.id] }
- end
+def destroy
+	Category.find(params[:id]).destroy
+	flash[:success] = "Category and subcategories deleted!"
+	redirect_to categories_path
+end
   
 end
