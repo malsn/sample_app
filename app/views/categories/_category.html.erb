@@ -1,7 +1,11 @@
 <li>
+  <% if !category.parent.blank? %>  
   <%= link_to category.title, category %>
-  <% if current_user.admin? %>
-    | <%= link_to "delete", category, method: :delete,
-                                  data: { confirm: "You sure?" } %>
+	  <% if current_user.admin? %>
+		| <%= link_to "delete", category, method: :delete,
+									  data: { confirm: "You sure?" } %>
+	  <% end %>
+  <% else %>
+	<%= category.title %>
   <% end %>
 </li>

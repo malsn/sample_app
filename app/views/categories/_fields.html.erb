@@ -12,4 +12,17 @@
 <% end %>
 
 <%= f.label :parent_id %>
-<%= f.select :parent_id, options_for_select(@parcategories) %>
+<% if !@category.parent.nil? %>
+	<%= 
+	@current_cat = @category
+	@collection = [@current_cat]
+	collect(@current_cat)
+	f.select :parent_id, options_for_select(@parcategories.delete_if { |item| item == [@category.title, @category.id] }, @category.parent.id) 
+	%>
+<% else %>
+	<%= f.select :parent_id, options_for_select(@parcategories) %>
+<% end %>
+
+<%= 
+@collections = @collection.map { |cat| [cat.title, cat.id] }
+f.select :parent_id, options_for_select(@collections) %>

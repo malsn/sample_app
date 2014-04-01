@@ -2,14 +2,18 @@ class CategoriesController < ApplicationController
 
  def index
 	#@categories = Category.where(parent_id: nil).paginate(page: params[:page])
-	@categories = current_user.categories.paginate(page: params[:page])
+	@categories = current_user.categories.where(parent_id: 1).paginate(page: params[:page])
  end
  
  def show
 	@category = Category.find(params[:id])
 	@subcategories = @category.subcategories
 	self.objlist
-	render 'edit'
+	if !@category.parent.nil?
+		render 'edit'
+	else
+		redirect_to categories_path
+	end
  end
 
  def create

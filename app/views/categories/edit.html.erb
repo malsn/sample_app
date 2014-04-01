@@ -4,13 +4,15 @@
 <div class="row">
   <aside class="span4">
 	<section>
-	<% if @category.parent.blank? %>
-	root
-	<% else %>
-	<%= link_to @category.parent.title, @category.parent %>
+	<h4>Parent:</h4>
+	<% if @category.parent.parent.nil? %>
+		<%= link_to @category.parent.title, categories_path %>
+	<% else %>	
+		<%= link_to @category.parent.title, @category.parent %>		
 	<% end %>
 	</section>
 	<section>
+	<h4>Childs:</h4>
 	<% if @subcategories.empty? %>
 	Has no child categories
 	<% else %>
