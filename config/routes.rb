@@ -9,6 +9,10 @@ SampleApp::Application.routes.draw do
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
   resources :categories
+  resources :categories do
+	resources :contents
+  end
+
 
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'

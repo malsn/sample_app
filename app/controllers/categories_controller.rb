@@ -9,6 +9,7 @@ before_filter :signed_in_user
  def show
 	@category = Category.find(params[:id])
 	@subcategories = @category.subcategories
+	@contents = @category.contents
 	if !@category.parent.nil?
 		render 'edit'
 	else

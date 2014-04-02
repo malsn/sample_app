@@ -1,0 +1,11 @@
+<% provide(:title, 'New Content') %>
+<h1>Add new content for category <%= @category.title %></h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @content, url: {action: "create"} do |f| %>
+	  <%= render 'fields', f: f %>
+      <%= f.submit "Create new content", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

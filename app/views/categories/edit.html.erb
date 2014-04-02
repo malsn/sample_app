@@ -1,5 +1,5 @@
 <% provide(:title, 'Edit Category') %>
-<h1>Edit category <%= @category.title %></h1>
+<h3><%= @category.title %></h3>
 
 <div class="row">
   <aside class="span4">
@@ -18,6 +18,17 @@
 	<% else %>
 	<ul class="subcategories">
 	  <%= render @subcategories %>
+	</ul>
+	<% end %>
+	</section>
+	<section>
+	<h4>Contents:</h4>
+	<div><%= link_to 'New content', new_category_content_path(@category) %></div>
+	<% if @contents.empty? %>
+	Has no contents
+	<% else %>
+	<ul class="contents">
+	  <%= render @contents %>
 	</ul>
 	<% end %>
 	</section>
