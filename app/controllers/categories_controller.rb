@@ -23,6 +23,7 @@ before_filter :signed_in_user
 	  flash[:success] = "Category successfully created!"
       redirect_to edit_category_path(@category)
     else
+	  @subcategories = @category.parent.subcategories.paginate(page: params[:page], per_page: 10)
       render 'new'
     end
  end
