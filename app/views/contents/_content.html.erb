@@ -1,0 +1,7 @@
+<li>
+  <%= link_to content.title, edit_category_content_path(@category, content, {page: params[:page]}) %>
+	  <% if current_user.admin? %>
+		| <%= link_to "delete", category_content_path(@category, content), method: :delete,
+									  data: { confirm: "You sure?" } %>
+	  <% end %>
+</li>

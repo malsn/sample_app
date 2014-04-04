@@ -8,29 +8,40 @@
 	<% if @category.parent.parent.nil? %>
 		<%= link_to @category.parent.title, categories_path %>
 	<% else %>	
-		<%= link_to @category.parent.title, @category.parent %>		
+		<%= link_to @category.parent.title, edit_category_path(@category.parent) %>		
 	<% end %>
 	</section>
+	
 	<section>
 	<h4>Childs:</h4>
+	<div><%= link_to 'New category', category_new_path(@category), class: "btn btn-large btn-primary" %></div>
 	<% if @subcategories.empty? %>
 	Has no child categories
 	<% else %>
 	<ul class="subcategories">
 	  <%= render @subcategories %>
 	</ul>
+	
+	<%= will_paginate @subcategories %>
+	
 	<% end %>
 	</section>
+	
 	<section>
-	<h4>Contents:</h4>
-	<div><%= link_to 'New content', new_category_content_path(@category) %></div>
+	<h4>Contents:</h4>	
+	<div><%= link_to 'New content', new_category_content_path(@category), class: "btn btn-large btn-primary" %></div>	
 	<% if @contents.empty? %>
 	Has no contents
 	<% else %>
-	<ul class="contents">
+	
+	<ul class="subcontents">
 	  <%= render @contents %>
 	</ul>
+	
+	<%= will_paginate @contents %>
+	
 	<% end %>
+	
 	</section>
   </aside>
   <div class="span8">

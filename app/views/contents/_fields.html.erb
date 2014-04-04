@@ -6,6 +6,7 @@
 <%= f.label :text %>
 <%= f.text_area :text, size: "60x12" %>
 
+<!--
 <% if current_user.admin? %>
 <%= f.label :user_id %>
 <%= f.select :user_id, options_for_select( User.all.map { |user| [user.name, user.id] } , current_user.id) %>
@@ -22,3 +23,4 @@
 <% else %>
 	<%= f.select :category_id, options_for_select(@allcategories.map { |cat| [cat.title, cat.id] }) %>
 <% end %>
+-->
