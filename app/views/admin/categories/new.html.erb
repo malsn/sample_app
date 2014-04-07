@@ -1,0 +1,36 @@
+﻿<% provide(:title, 'New Category') %>
+<h1>Add new category for user <%= current_user.name %></h1>
+
+<div class="row">
+  <aside class="span4">
+	<section>
+	<h5>Разместить в разделе:</h5>
+	<% if @category.parent.nil? %>
+		<%= link_to 'root_category', admin_categories_path %>
+	<% else %>	
+		<%= link_to @category.parent.title, edit_admin_category_path(@category.parent) %>		
+	<% end %>
+	</section>
+	
+	<section>
+	<h5>Подразделы этого раздела:</h5>
+	<% if @subcategories.empty? %>
+	Has no child categories
+	<% else %>
+	<ul class="subcategories">
+	  <%= render @subcategories %>
+	</ul>
+	
+	<%= will_paginate @subcategories %>
+	
+	<% end %>
+	</section>
+	
+  </aside>
+  <div class="span8">
+    <%= form_for @category, url: admin_categories_path(@category) do |f| %>
+	  <%= render 'fields', f: f %>
+      <%= f.submit "Создать раздел", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

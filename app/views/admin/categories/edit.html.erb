@@ -1,0 +1,53 @@
+﻿<% provide(:title, 'Edit Category') %>
+<h3><%= @category.title %></h3>
+
+<div class="row">
+  <aside class="span4">
+	<section>
+	<h5>Родительский раздел:</h5>
+	<% if @category.parent.parent.nil? %>
+		<%= link_to @category.parent.title, admin_categories_path %>
+	<% else %>	
+		<%= link_to @category.parent.title, edit_admin_category_path(@category.parent) %>		
+	<% end %>
+	</section>
+	
+	<section>
+	<h5>Подразделы этого раздела:</h5>
+	<div><%= link_to 'Новый раздел', admin_category_new_path(@category), class: "btn btn-large btn-primary" %></div>
+	<% if @subcategories.empty? %>
+	Нет подразделов
+	<% else %>
+	<ul class="subcategories">
+	  <%= render @subcategories %>
+	</ul>
+	
+	<%= will_paginate @subcategories %>
+	
+	<% end %>
+	</section>
+	
+	<section>
+	<h5>Материалы этого раздела:</h5>	
+	<div><%= link_to 'Новый материал', new_admin_category_content_path(@category), class: "btn btn-large btn-primary" %></div>	
+	<% if @contents.empty? %>
+	Нет материалов
+	<% else %>
+	
+	<ul class="subcontents">
+	  <%= render @contents %>
+	</ul>
+	
+	<%= will_paginate @contents %>
+	
+	<% end %>
+	
+	</section>
+  </aside>
+  <div class="span8">
+    <%= form_for @category, url: admin_category_path(@category) do |f| %>
+	  <%= render 'fields', f: f %>
+      <%= f.submit "Обновить", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

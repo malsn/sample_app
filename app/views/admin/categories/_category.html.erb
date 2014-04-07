@@ -1,0 +1,11 @@
+<li>
+  <% if !category.parent.blank? %>  
+  <%= link_to category.title, edit_admin_category_path(category) %>
+	  <% if current_user.admin? %>
+		| <%= link_to "delete", admin_category_path(category), method: :delete,
+									  data: { confirm: "You sure?" } %>
+	  <% end %>
+  <% else %>
+	<%= category.title %>
+  <% end %>
+</li>

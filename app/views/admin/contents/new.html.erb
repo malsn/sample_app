@@ -1,0 +1,32 @@
+<% provide(:title, 'New Content') %>
+<h1>Add new content for category <%= @category.title %></h1>
+
+<div class="row">
+  <aside class="span4">
+	<section>
+	<h5>Разместить в разделе:</h5>
+	<% if @category.nil? %>
+		<%= link_to 'root_category', admin_categories_path %>
+	<% else %>	
+		<%= link_to @category.title, edit_admin_category_path(@category) %>		
+	<% end %>
+	</section>
+	
+	<section>
+	<h5>Материалы в разделе:</h5>
+	<ul class="subcontents">
+	  <%= render @contents %>
+	</ul>
+	
+	<%= will_paginate %>
+	
+	</section>
+	
+  </aside>
+  <div class="span8">
+    <%= form_for @content, { url: admin_category_contents_path(@category), action: "create" } do |f| %>
+	  <%= render 'fields', f: f %>
+      <%= f.submit "Создать материал", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :title %>
+<%= f.text_field :title %>
+
+<%= f.label :text %>
+<%= f.text_area :text, size: "60x12" %>
+
+<!--
+<% if current_user.admin? %>
+<%= f.label :user_id %>
+<%= f.select :user_id, options_for_select( User.all.map { |user| [user.name, user.id] } , current_user.id) %>
+<% end %>
+
+<%= f.label :parent_id %>
+<% @allcategories = Category.all %>
+<% if !@category.nil? %>
+	<%= 
+	@collection = [@category]
+	@cutcategories = @allcategories
+	f.select :category_id, options_for_select(@cutcategories.map { |cat| [cat.title, cat.id] } , @category.id)
+	%>
+<% else %>
+	<%= f.select :category_id, options_for_select(@allcategories.map { |cat| [cat.title, cat.id] }) %>
+<% end %>
+-->
