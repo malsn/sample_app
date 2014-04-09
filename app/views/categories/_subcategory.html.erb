@@ -1,7 +1,0 @@
-<li>
-  <%= link_to subcategory.title, subcategory %>
-  <% if current_user.admin? %>
-    | <%= link_to "delete", subcategory, method: :delete,
-                                  data: { confirm: "You sure?" } %>
-  <% end %>
-</li>
