@@ -1,4 +1,6 @@
 class SessionsController < ApplicationController
+  layout "site/index"
+  
   def new
   end
 

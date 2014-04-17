@@ -1,4 +1,6 @@
-class StaticPagesController < ApplicationController
+class Site::StaticPagesController < ApplicationController
+  layout 'site/index'
+  
   def home
 	if signed_in?
 		@micropost = current_user.microposts.build

@@ -1,5 +1,6 @@
 class Admin::CategoriesController < ApplicationController
-before_filter :signed_in_user
+layout "admin/index"
+before_filter :admin_user
 
  def index
 	#@categories = Category.where(parent_id: nil).paginate(page: params[:page])

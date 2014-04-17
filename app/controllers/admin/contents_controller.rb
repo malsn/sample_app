@@ -1,5 +1,6 @@
 class Admin::ContentsController < ApplicationController
-before_filter :signed_in_user
+layout "admin/index"
+before_filter :admin_user
 
 def edit
 	@category = Category.find(params[:category_id])

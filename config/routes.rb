@@ -1,5 +1,8 @@
 SampleApp::Application.routes.draw do
-  resources :users do
+  
+  root to: 'site/info#index'
+  
+  resources :users, except: :destroy do
     member do
       get :following, :followers
     end
@@ -14,18 +17,20 @@ SampleApp::Application.routes.draw do
 		resources :contents
 		get :new
 		post :create
-	  end
+	  end	  
+	  resources :users
 	end
 
+  match '/info',  to: 'site/info#index'	
+	
+  match '/admin',   to: 'admin/categories#index'
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
-  get "static_pages/home"
-  
-  root to: 'static_pages#home'
+  #get "static_pages/home"  
 
-  match '/help', to: 'static_pages#help'
+  match '/help', to: 'site/static_pages#help'
 
   match '/about', to: 'static_pages#about'
   
