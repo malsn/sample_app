@@ -2,11 +2,13 @@ SampleApp::Application.routes.draw do
   
   root to: 'site/info#index'
   
-  resources :users, except: :destroy do
-    member do
-      get :following, :followers
-    end
-  end  
+  scope module: 'site' do
+	  resources :users, except: :destroy do
+		member do
+		  get :following, :followers
+		end
+	  end    
+  end
   
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts, only: [:create, :destroy]
@@ -24,7 +26,7 @@ SampleApp::Application.routes.draw do
   match '/info',  to: 'site/info#index'	
 	
   match '/admin',   to: 'admin/categories#index'
-  match '/signup',  to: 'users#new'
+  match '/signup',  to: 'site/users#new'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
 
