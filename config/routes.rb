@@ -1,18 +1,18 @@
 SampleApp::Application.routes.draw do
   
-  root to: 'site/info#index'
+  root to: 'site/static_pages#feed'
   
   scope module: 'site' do
 	  resources :users, except: :destroy do
 		member do
 		  get :following, :followers
 		end
-	  end    
+	  end
+	  resources :microposts, only: [:create, :destroy]
+	  resources :relationships, only: [:create, :destroy]
   end
   
   resources :sessions, only: [:new, :create, :destroy]
-  resources :microposts, only: [:create, :destroy]
-  resources :relationships, only: [:create, :destroy]
   
 	namespace :admin do
 	  resources :categories do
@@ -34,9 +34,9 @@ SampleApp::Application.routes.draw do
 
   match '/help', to: 'site/static_pages#help'
 
-  match '/about', to: 'static_pages#about'
+  match '/about', to: 'site/static_pages#about'
   
-  match '/contact', to: 'static_pages#contact'
+  match '/contact', to: 'site/static_pages#contact'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
