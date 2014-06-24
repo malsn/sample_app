@@ -4,7 +4,7 @@
 
 tinymce.init({
 	mode: 'textareas',
-	selector : "#content_text",
+	selector : "#category_text",
 	plugins: "uploadimage,code,image",
 	theme_advanced_buttons3 : "uploadimage,image",
  });
