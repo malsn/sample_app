@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(:version => 20140731124256) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
     t.integer  "category_id"
+    t.integer  "group_id"
   end
 
   create_table "microposts", :force => true do |t|
