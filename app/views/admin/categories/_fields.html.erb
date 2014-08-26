@@ -3,8 +3,11 @@
 <%= f.label :title %>
 <%= f.text_field :title %>
 
+<%= f.label :title_alias %>
+<%= f.text_field :title_alias, class: "s_alias" %>
+
 <%= f.label :text %>
-<%= f.text_area :text, size: "60x12" %>
+<%= f.text_area :text, size: "60x12", :escape => 'false'  %>
 
 <% if current_user.admin? %>
 <%= f.label :user_id %>

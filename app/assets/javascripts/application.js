@@ -16,3 +16,17 @@
 //= require tinymce
 //= require tinymce-jquery
 //= require_tree .
+
+$(function(){
+	$('body').liTranslit({ 
+		elName: '.s_name',     
+		elAlias: '.s_alias'   
+	  });
+  })
+  
+tinymce.init({
+	mode: 'textareas',
+	selector : "#category_text",
+	plugins: "uploadimage,code,image",
+	theme_advanced_buttons3 : "uploadimage,image"
+ });

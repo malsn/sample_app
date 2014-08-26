@@ -23,7 +23,9 @@ SampleApp::Application.routes.draw do
 	  resources :users
 	end
 
-  match '/info',  to: 'site/info#index'	
+  match '/info',  to: 'site/info#index'
+  match '/info/:alias/',  to: 'site/info#category'
+  match '/feed',  to: 'site/static_pages#feed'	
 	
   match '/admin',   to: 'admin/categories#index'
   match '/signup',  to: 'site/users#new'
