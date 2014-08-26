@@ -1,0 +1,9 @@
+﻿<% provide(:title, 'All categories') %>
+<h1><%= @cat.title %></h1>
+<div><%= @cat.text.html_safe() %></div>
+
+<div>Смотрите также:</div>
+<ul>
+	 <%= render @categories %>
+</ul>
+
